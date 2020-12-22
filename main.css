@@ -1,0 +1,1206 @@
+@font-face {
+    font-family: "ubuntumedium";
+    src: url("fonts/ubuntumedium.woff") format("woff"),
+        url("fonts/ubuntumedium.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ubunturegular";
+    src: url("fonts/ubunturegular.woff") format("woff"),
+        url("fonts/ubunturegular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'ubunturegular';
+    font-size: 24px;
+    line-height: 28px;
+    color: #070707;
+    background-color: #E5E5E5;
+    max-width: 1440px;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*mobile*/
+/*header*/
+.header__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    z-index: 5;
+    transform: translateY(-100%);
+    transition: transform ease-in 0.4s;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E5E5;
+
+}
+
+.menu--active {
+    transform: translateY(0);
+}
+
+.header__link {
+    font-family: "ubunturegular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    display: block;
+    padding: 25px 0;
+    text-decoration: none;
+    transition: color ease-in 0.4s;
+}
+
+.header__link:hover {
+    color: #E63E00;
+}
+
+.header__hamburger {
+    display: block;
+    outline: none;
+    position: relative;
+}
+
+.hamburger {
+    width: 19px;
+    height: 16px;
+    padding: 0;
+    font-size: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 6;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    width: 19px;
+    height: 2px;
+    transition: all ease-in 0.4s;
+    background-color: #000000;
+    box-shadow: 0 7px 0 0 #000000,
+        0 14px 0 0 #000000
+}
+
+.hamburger--active::before {
+    top: 25px;
+    transform: rotate(45deg);
+    box-shadow: none;
+}
+
+.hamburger--active::after {
+    top: 25px;
+    transform: rotate(-45deg);
+    box-shadow: none;
+}
+
+/*primary*/
+.primary__info {
+    display: flex;
+    justify-content: center;
+    margin: 60px 7px 50px 6px;
+}
+
+.primary__text {
+    font-family: "ubuntumedium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: inherit;
+    position: static;
+}
+
+.primary__img {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0;
+    height: 180px;
+}
+
+.primary__button {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.primary__button__info {
+    font-family: "ubunturegular";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    background: #E63E00;
+    color: #ffffff;
+    padding: 14px 42px 13px 42px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    transition: background-color ease-in 0.4s;
+    cursor: pointer;
+}
+
+.primary__button__info:hover {
+    background-color: #C33500;
+}
+
+/*why*/
+.why__info {
+    margin-top: 35px;
+}
+
+.why__title {
+    text-align: center;
+    font-family: "ubuntumedium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0;
+}
+
+.why__text__info {
+    margin-top: 37px;
+    display: flex;
+    justify-content: center;
+}
+
+.why__text {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.why__li {
+    margin-bottom: 22px;
+    display: flex;
+
+}
+
+.number {
+    font-family: "ubuntumedium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #E63E00;
+    margin: 0 40px 0 0;
+}
+
+.text__why {
+    font-family: "ubuntumedium";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    max-width: 196px;
+}
+
+.shawarma_tablet_img {
+    display: none;
+}
+
+/*catalog*/
+.title {
+    margin: 43px 0 40px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+    font-family: "ubuntumedium";
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.title::before,
+.title::after {
+    content: "";
+    margin: 0 19px 0 0;
+    height: 3px;
+    width: 25px;
+    background-color: #E63E00;
+}
+
+.catalog__container__img {
+    display: flex;
+    justify-content: center;
+}
+
+.shawarma__name {
+    font-family: "ubuntumedium";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 30px 0 20px;
+}
+
+.shawarma__composition {
+    font-family: "ubunturegular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -0.5px;
+    color: #9C9C9C;
+    margin: 0 0 10px 0;
+}
+
+.catalog__price {
+    font-family: "ubuntumedium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0 0 43px 0;
+    text-align: center;
+}
+
+.catalog__button {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.catalog__button__info {
+    background: #E63E00;
+    border-radius: 3px;
+    font-family: "ubunturegular";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 13px 88px 14px 88px;
+    text-decoration: none;
+    transition: background-color ease-in 0.4s;
+
+}
+
+.catalog__button__info:hover {
+    background-color: #C33500;
+}
+
+/*form*/
+.form {
+    background-image: url(img/bg-form2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.form__title__text {
+    font-family: "ubunturegular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 22px;
+    margin: 0 0 25px;
+}
+
+.form__info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.form__person__info {
+    font-family: "ubunturegular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin: 0;
+    padding-right: 53px;
+}
+
+.form__person__info_call {
+    font-family: "ubunturegular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin: 0;
+    padding-right: 14px;
+}
+
+.form__input {
+    background: none;
+    outline: none;
+    border-bottom: 1px solid #FFFFFF;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 190px;
+
+}
+
+.form__input:focus {
+    border-bottom: 1px solid #E63E00;
+}
+
+.form__button {
+    text-align: center;
+}
+
+.form__button__info {
+    background: #E63E00;
+    border-radius: 3px;
+    font-family: "ubunturegular";
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 99px 12px 98px;
+    transition: background-color ease-in 0.4s;
+    cursor: pointer;
+}
+
+.form__button__info:hover {
+    background-color: #C33500;
+}
+
+.form__consent {
+    margin-top: 17px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.consent {
+    font-family: "ubunturegular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 11px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 280px;
+}
+
+.slider {
+    width: 240px;
+    margin: 0 auto;
+}
+
+.slider .slick-arrow {
+    display: inline-block;
+
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 28px;
+    border: 0;
+    font-size: 0;
+    padding: 0;
+    background-color: transparent;
+    outline: 0;
+    top: 50%;
+    position: absolute;
+}
+
+.slider .slick-arrow.slick-prev {
+    left: -27px;
+    background-image: url("img/arrow-left\ 1.png");
+}
+
+.slider .slick-arrow.slick-next {
+    right: -27px;
+    background-image: url("img/arrow 1.png");
+}
+
+/*map*/
+.map {
+    display: none;
+    margin-top: 30px;
+}
+
+/*footer*/
+.footer__logo {
+    margin: 60px 0 10px;
+    text-align: center;
+}
+
+.logo__footer {
+    margin: 0;
+}
+
+.footer__numb {
+    text-align: center;
+}
+
+.date {
+    margin: 0;
+    font-family: "ubunturegular";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #401100;
+}
+
+.footer__policy {
+    margin: 20px 0 32px;
+}
+
+.policy {
+    font-family: "ubunturegular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+}
+
+.menu__footer {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 35px p 25px 0;
+}
+
+.menu__1 {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-bottom: 15px;
+    flex-direction: column;
+}
+
+.footer__menu__item {
+    font-family: "ubunturegular";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+    padding-bottom: 35px;
+}
+
+.footer__link__left {
+    font-family: "ubuntumedium";
+    padding-right: 50px;
+    text-decoration: none;
+    color: #000000;
+    transition: color ease-in 0.4s;
+}
+
+.footer__link__left:hover {
+    color: #E63E00;
+}
+
+.footer__link__right {
+    font-family: "ubuntumedium";
+    padding-left: 50px;
+    text-decoration: none;
+    color: #000000;
+    transition: color ease-in 0.4s;
+}
+
+.footer__link__right:hover {
+    color: #E63E00;
+}
+
+.footer__link {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.img__vk {
+    margin-right: 35px;
+}
+
+.img__inst {
+    margin-left: 35px;
+}
+
+.footer_contact {
+    margin-bottom: 20px;
+}
+
+.contact {
+    font-family: "ubunturegular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+}
+
+.footer__mail {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.mail {
+    font-family: "ubuntumedium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+}
+
+/*tablet*/
+@media (min-width: 768px) {
+
+    /*header*/
+    .header__wrap {
+        background-color: #E5E5E5;
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu {
+        transform: none;
+        transition: none;
+        background: none;
+        z-index: 0;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        width: auto;
+        height: auto;
+        position: static;
+    }
+
+    .header__link {
+        font-family: "ubuntumedium";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: #000000;
+        padding-left: 30px;
+    }
+
+    .header__hamburger {
+        display: none;
+    }
+
+    /*primary*/
+    .primary {
+        margin-top: 112px;
+        display: flex;
+    }
+
+    .primary__info {
+        margin: 60px 0 0px 20px;
+    }
+
+    .primary__text {
+        font-size: 24px;
+        line-height: 28px;
+        margin: 0;
+    }
+
+    .primary__img {
+        position: absolute;
+        right: 0px;
+        padding: 0;
+        top: 112px;
+    }
+
+    .primary__button {
+        justify-content: space-between;
+        margin: 104px 0 0 40px
+    }
+
+    /*why*/
+    .why__info {
+        margin-top: 146px;
+    }
+
+    .why__title {
+        font-size: 36px;
+        line-height: 41px;
+    }
+
+    .why__text__info {
+        position: relative;
+    }
+
+    .number {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 37px;
+        text-transform: uppercase;
+        height: 36px;
+        margin-right: 50px;
+    }
+
+    .text__why {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 34px;
+        letter-spacing: -0.2px;
+        max-width: 100%;
+        max-height: 74px;
+        margin-bottom: 18px;
+    }
+
+    .shawarma_tablet_img {
+        position: absolute;
+        display: block;
+        top: 155px;
+        width: 299px;
+        height: 234px;
+        right: 30px;
+
+    }
+
+    /*catalog*/
+    .catalog__title {
+        margin-top: 30px;
+    }
+
+    .title {
+        justify-content: start;
+        margin: 0 0 50px 0;
+        font-size: 32px;
+        line-height: 37px;
+    }
+
+    .title::before {
+        transform: rotate(180deg);
+        width: 5px;
+        height: 50px;
+    }
+
+    .title::after {
+        display: none;
+    }
+
+    .catalog__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu__tablet {
+        display: flex;
+    }
+
+    .lot1 {
+        padding-right: 14px;
+    }
+
+    .lot2 {
+        padding-left: 14px;
+    }
+
+    .shawarma__name {
+        font-size: 28px;
+        line-height: 32px;
+        font-family: "ubunturegular";
+    }
+
+    .shawarma__composition {
+        max-width: 350px;
+    }
+
+    .button__price {
+        display: flex;
+        margin-top: 51px;
+        justify-content: center;
+    }
+
+    .catalog__button__info {
+        padding: 13px 51px 14px 50px;
+    }
+
+    .catalog__price {
+        padding-right: 35px;
+    }
+
+    /*form*/
+    .form {
+        margin-top: 46px;
+        background-image: url(img/Фонtab.png);
+    }
+
+    .form__title__text {
+        padding-top: 34px;
+        font-size: 36px;
+        line-height: 41px;
+        margin-bottom: 20px;
+    }
+
+    .form__person__info {
+        font-size: 30px;
+        line-height: 34px;
+        padding-right: 20px;
+    }
+
+    .form__person__info_call {
+        font-size: 30px;
+        line-height: 34px;
+        padding-right: 20px;
+    }
+
+    .form__call {
+        padding-right: 61px;
+    }
+
+    .form__input {
+        width: 350px;
+    }
+
+    .form__button__consent {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 60px;
+        justify-content: center;
+    }
+
+    .form__button {
+        padding-right: 60px;
+        margin-top: 13px;
+    }
+
+    .form__button__info {
+        padding: 11px 31px;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .form__consent {
+        margin: 0 0 37px 0;
+        padding: 0;
+    }
+
+    .consent {
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0;
+        padding: 0 90px 0 0;
+        width: 291px;
+    }
+
+    /*customers*/
+    .customers {
+        margin-top: 40px;
+    }
+
+    .customers .title {
+        margin-bottom: 30px;
+    }
+
+    .slider {
+        width: auto;
+    }
+
+    .slider .slick-arrow {
+        top: -69px;
+    }
+
+    .slider .slick-arrow.slick-next {
+        right: 0;
+    }
+
+    .slider .slick-arrow.slick-prev {
+        left: auto;
+        right: 28px;
+    }
+
+    .slider .slick-slide {
+        margin-right: 34px;
+    }
+
+    /*map*/
+    .map {
+        display: block;
+        margin-top: 35px;
+    }
+
+    /*footer*/
+    .footer {
+        margin-top: 50px;
+    }
+
+    .menu__and__info {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer__info {
+        display: flex;
+        flex-direction: column;
+        padding-right: 150px;
+    }
+
+    .footer__logo {
+        margin: 0;
+    }
+
+    .footer__numb {
+        text-align: left;
+    }
+
+    .policy {
+        text-align: left;
+    }
+
+    .footer__link {
+        margin-top: 40px;
+    }
+
+    .img__vk {
+        margin-right: 63px;
+        padding: 0;
+    }
+
+    .img__inst {
+        margin-left: 63px;
+        padding: 0;
+    }
+
+    .contact {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+/*desktop*/
+@media (min-width: 1201px) {
+    .container {
+        padding: 0 140px;
+    }
+
+    /*header*/
+    .header .container {
+        padding: 0 160px;
+    }
+
+    .header__wrap {
+        width: 100%;
+        padding-top: 17px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 6;
+    }
+
+    .header__nav {
+        margin-right: 70px;
+    }
+
+    .header__link {
+        font-size: 20px;
+        line-height: 23px;
+        padding-left: 70px;
+    }
+
+    /*primary*/
+    .primary {
+        margin-top: 173px;
+        position: relative;
+    }
+
+    .primary__info {
+        margin: -2px 0px 0 19px;
+    }
+
+    .primary__text {
+        font-size: 36px;
+        line-height: 41px;
+    }
+
+    .primary__img {
+        right: 120px;
+        position: absolute;
+        top: -60px;
+        right: 120px;
+    }
+
+    .primary__button {
+        margin: 45px 0 0 162px;
+    }
+
+    .primary__button__info {
+        padding: 11px 30px;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    /*why*/
+    .why {
+        margin-bottom: 133px;
+    }
+
+    .shawarma_tablet_img {
+        width: auto;
+        top: -18px;
+        left: 0;
+        position: relative;
+        margin-right: 20px;
+    }
+
+    .why__text__info {
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin-top: 95px;
+    }
+
+    .number {
+        font-size: 36px;
+        line-height: 41px;
+    }
+
+    .text__why {
+        font-size: 32px;
+        line-height: 37px;
+        letter-spacing: -0.2px;
+        font-family: "ubunturegular";
+    }
+
+    .why__tablet__img {
+        height: 460px;
+        width: 600px;
+    }
+
+    .slider .slick-slide {
+        margin-right: 27px;
+    }
+
+    /*catalog*/
+    .catalog {
+        margin-top: 110px;
+    }
+
+    .title {
+        font-size: 36px;
+        line-height: 41px;
+        margin: 0 0 40px 0;
+    }
+
+    .catalog__menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .catalog__price {
+        width: 79px;
+        padding: 0;
+        margin-right: 50px;
+    }
+
+    .lot1 {
+        padding: 0;
+        margin-right: 25px;
+    }
+
+    .lot2 {
+        padding: 0;
+    }
+
+    .lot3 {
+        padding: 0;
+        margin-left: 25px;
+    }
+
+    /*form*/
+    .form {
+        margin-top: 10px;
+        background-image: url(img/Фон.png);
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .form__info {
+        justify-content: flex-end;
+    }
+
+    .form__call {
+        padding: 0;
+    }
+
+    .form__button__consent {
+        justify-content: flex-start;
+        margin-top: 50px;
+    }
+
+    .form__button {
+        padding: 0;
+    }
+
+    .form__title__text {
+        padding-top: 40px;
+        margin: 0 90px 25px 0;
+        text-align: end;
+    }
+
+    /*footer*/
+    .footer {
+        display: flex;
+        margin-bottom: 84px;
+        justify-content: center;
+    }
+
+    .footer__info {
+        padding: 0;
+        margin-right: 176px;
+    }
+
+    .footer__logo {
+        margin-bottom: 10px;
+    }
+
+    .footer__numb {
+        margin-bottom: 20px;
+    }
+
+    .footer__policy {
+        margin: 0;
+    }
+
+    .menu__footer {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .menu__1 {
+        margin: 0;
+    }
+
+    .footer__menu__item {
+        padding: 0;
+        margin-bottom: 14px;
+    }
+
+    .footer__menu {
+        margin-top: 25px;
+        margin-right: 133px;
+    }
+
+    .footer__link__right {
+        padding: 0;
+    }
+
+    .footer__link__left {
+        padding: 0;
+    }
+
+    .footer__link {
+        margin-top: 25px;
+        flex-direction: column;
+        margin-right: 128px;
+    }
+
+    .img__vk {
+        padding: 0;
+        width: 50px;
+        margin: 0 0 40px 0;
+        opacity: 0.2;
+
+    }
+
+    .img__vk:hover {
+        opacity: 1;
+    }
+
+    .img__inst {
+        padding: 0;
+        width: 50px;
+        opacity: 0.2;
+        margin: 0;
+    }
+
+    .img__inst:hover {
+        opacity: 1;
+    }
+
+    .footer_contact {
+        margin-bottom: 30px;
+    }
+
+    .footer__mail {
+        margin: 0;
+        justify-content: left;
+    }
+
+    .contact {
+        text-align: left;
+    }
+
+    .footer__info_desk {
+        margin-top: 20px;
+    }
+
+}
